@@ -1,70 +1,51 @@
-# React JS + Vite + Tailwind CSS + DaisyUI + ESLint + Prettier Template
+<div align="center"><img src="./public/assets/hackato.png" alt="hackathon header"></div>
 
-This template provides a starting point for React projects using Vite as the build tool, Tailwind CSS for styling, DaisyUI for additional UI components, ESLint for code linting, and Prettier for code formatting.
+## Technologies Used
 
-## Features
+#### FrontEnd:
+  <img src="https://img.shields.io/badge/React-61DAFB?logo=react&logoColor=000&style=flat" alt="React Badge">  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=000&style=flat" alt="JavaScript Badge"> 
+lds.io/badge/Axios-5A29E4?logo=axios&logoColor=fff&style=flat" alt="Axios Badge">
 
-- **React JS:** A JavaScript library for building user interfaces.
-- **Vite:** A fast build tool and development server.
-- **Tailwind CSS:** A utility-first CSS framework.
-- **DaisyUI:** A Tailwind CSS component library for faster UI development.
-- **ESLint:** A tool for identifying and fixing problems in your JavaScript code.
-- **Prettier:** An opinionated code formatter.
+#### Development Tools:
+  <img src="https://img.shields.io/badge/React%20Router-CA4245?logo=reactrouter&logoColor=fff&style=flat" alt="React Router Badge">   <img src="https://img.shields.io/badge/Vite-646CFF?logo=vite&logoColor=fff&style=flat" alt="Vite Badge">
+ 
 
-## Getting Started
+## Workflow Description:
+1. The user selects a filter from the `FiltersGroup`, which updates the filter state using the `IdeaContext`.
+2. `IdeaGenerator` calls the `fetchIdea` function with the updated filter.
+4. `fetchIdea` makes a request to the API to get a new activity and updates the `IdeaContext` with the received information.
+5. `Activitat` displays the obtained idea or handles error states.
 
-To get started with this template, follow these steps:
 
-### 1. Clone the Repository
+## Installation
 
-```bash
-git clone https://github.com/tomi-casabona/template-ReactJs
-cd your-repo-name
-```
+1. Clone the repository:
 
-### 2. Install Dependencies
+   ```bash
+   git clone https://github.com/tomi-casabona/booredApp
+   ```
 
-Install the necessary packages using npm or yarn:
+2. Navigate to the project directory:
 
-```bash
-npm install
-# or
-yarn install
-```
+   ```bash
+   cd booredApp.git
+   ```
 
-### 3. Start the Development Server
+3. Install the dependencies:
 
-Run the development server using:
+   ```bash
+   npm install
+   ```
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+4. Start the application:
 
-Visit http://localhost:3000 in your browser to see your React application in action.
+   ```bash
+   npm run dev
+   ```
 
-### 4. Build for Production
+5. Open your browser and visit `http://localhost:{PortNumber}`.
 
-To build the project for production, use:
-
-```bash
-npm run build
-# or
-yarn build
-```
-
-The production build will be generated in the dist directory.
-
-Configuration
-Vite
-Vite is configured by default. You can customize Vite settings in the vite.config.js file.
-
-Tailwind CSS
-Tailwind CSS is set up with a base configuration. You can customize Tailwind settings in the tailwind.config.js file.
-
-DaisyUI
-DaisyUI is included as a plugin for Tailwind CSS. Additional components can be used directly in your React components.
-
-ESLint
-ESLint is configured to ensure code quality and consistency. Configuration can be found in the .eslintrc.js file.
+## Usage
+1. Use the filter bar at the top to select an activity category.
+2. Click the "Generate" button to get a random idea from the selected category.
+3. If no filter is selected, a random unfiltered activity will be displayed.

@@ -1,3 +1,19 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.trapezoid {
+  position: relative; /* Mantiene el trapezoide en el flujo normal del documento */
+  margin-top: -20px; /* Ajusta la posición para superponerse ligeramente */
+  width: 80%; /* Ancho relativo al contenedor */
+  max-width: 400px; /* Ancho máximo */
+  height: auto; /* Deja que la altura se ajuste al contenido */
+  clip-path: polygon(10% 0, 90% 0, 75% 100%, 25% 100%); /* Forma trapezoidal */
+  border-radius: 15px; /* Bordes redondeados */
+  background-color: #e5e7eb; /* Color de fondo gris claro */
+  z-index: 1; /* Debe estar detrás de la imagen */
+}
+.img-container {
+  position: relative; /* Para que el z-index funcione correctamente */
+  z-index: 2; /* La imagen debe estar delante */
+}

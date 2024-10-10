@@ -1,22 +1,26 @@
+import { Activitat } from "./components/Activitat";
+import { FilterGroup } from "./components/FilterGroup";
+import { IdeaGenerator } from "./components/IdeaGenerator";
+import { NavBar } from "./components/navbar";
+
 function App() {
   return (
     <>
-      <h1 className="text-3xl font-bold underline text-center">Title!</h1>
-      <div className="card bg-base-100 w-96 shadow-xl mx-auto">
-        <figure>
-          <img
-            src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
-            alt="Shoes"
-          />
-        </figure>
-        <div className="card-body">
-          <h2 className="card-title">Card</h2>
-          <p>If a dog chews shoes whose shoes does he choose?</p>
-          <div className="card-actions justify-end">
-            <button className="btn btn-primary">Buy Now</button>
+      <main className="bg-slate-50 w-full h-lvh p-4 min-w-[300px] text-black font-bold">
+            <NavBar />
+        <div className="flex flex-col md:flex-row md:justify-between">
+          {/* Sección izquierda con NavBar, FilterGroup y IdeaGenerator */}
+          <div className="w-full md:w-1/2">
+            <FilterGroup />
+            <IdeaGenerator />
+          </div>
+
+          {/* Sección derecha con Activitat */}
+          <div className="w-full md:w-1/2 md:pl-4">
+            <Activitat />
           </div>
         </div>
-      </div>
+      </main>
     </>
   );
 }
