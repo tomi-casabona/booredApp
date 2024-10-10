@@ -7,15 +7,12 @@ function App() {
   return (
     <>
       <main className="bg-slate-50 w-full h-lvh p-4 min-w-[300px] text-black font-bold">
-            <NavBar />
+        <NavBar />
         <div className="flex flex-col md:flex-row md:justify-between">
-          {/* Sección izquierda con NavBar, FilterGroup y IdeaGenerator */}
           <div className="w-full md:w-1/2">
             <FilterGroup />
             <IdeaGenerator />
           </div>
-
-          {/* Sección derecha con Activitat */}
           <div className="w-full md:w-1/2 md:pl-4">
             <Activitat />
           </div>

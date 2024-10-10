@@ -15,7 +15,6 @@ export const fetchIdea = async (filter) => {
     }
 
     const data = await response.json();
-    console.log(data)
     return data;
   } catch (error) {
     console.error("Error al obtener la idea:", error);

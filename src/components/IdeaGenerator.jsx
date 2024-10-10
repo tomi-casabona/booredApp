@@ -1,6 +1,6 @@
 import pet from "../assets/images/personaje.png";
 import { useIdea } from "../context/IdeaProvider";
-import "../index.css"; // Asegúrate de que el CSS esté importado
+import "../index.css";
 
 export const IdeaGenerator = () => {
   const { getIdea, setIdea, setError } = useIdea();
@@ -11,7 +11,7 @@ export const IdeaGenerator = () => {
   };
   return (
     <div>
-      <div className="img-container z-20 w-1/2 h-1/3 md:w-1/3 mx-auto text-center mt-4">
+      <div className="img-container z-20 w-1/2 h-2/3 md:w-1/3 mx-auto text-center mt-4">
         <img className="mx-auto" src={pet} alt="app's avatar" />
       </div>
       <div

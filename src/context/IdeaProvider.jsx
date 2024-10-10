@@ -18,14 +18,13 @@ export function IdeaProvider({ children }) {
     setError(null);
     try {
       const response = await fetchIdea(filter);
-      console.log(response);
       setIdea(
         response.activity ? response.activity : response[randomNumber].activity
       );
     } catch (error) {
       setError(`Error al obtener la idea. ${error}`);
       console.error(error.message);
-    } 
+    }
   };
 
   const data = {
@@ -35,7 +34,7 @@ export function IdeaProvider({ children }) {
     getIdea,
     setFilter,
     setError,
-    setIdea
+    setIdea,
   };
   return <IdeaContext.Provider value={data}>{children}</IdeaContext.Provider>;
 }
